@@ -58,7 +58,7 @@ var load = function (user) {
     $.mobile.pageLoading();
 
     // Добавляем на всякий случай
-    var intervalId = window.setInterval(function () {
+    var timeoutId = window.setTimeout(function () {
          $.mobile.pageLoading(true);
     }, 3000);
     
@@ -81,7 +81,7 @@ var load = function (user) {
         $.mobile.pageLoading(true);
 
         // Убиваем таймер
-        window.clearInterval(intervalId);
+        window.clearTimeout(timeoutId);
     });
     
 };
