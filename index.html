@@ -2,40 +2,55 @@
 <html>
     <head>
         <title>Tumblr Reader</title>
+        <!-- Стили jQuery Mobile и наши  -->
         <link rel="stylesheet" href="libs/jquery.mobile.css" />
         <link rel="stylesheet" href="css/main.css" />
+
+        <!-- jQuery & jQuery Mobile -->
         <script type="text/javascript" charset="utf-8" src="libs/jquery.js"></script>
         <script type="text/javascript" charset="utf-8" src="libs/jquery.mobile.js"></script>
+
+        <!-- Скрипт phonegap -->
         <script type="text/javascript" charset="utf-8" src="libs/phonegap.js"></script>
+        
+        <!-- Это наш основной скрипт -->
         <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
     </head>
     <body>
-    
+
+        <!-- Список мелких картинок -->
         <div data-role="page" id="dashboard">
             <div data-role="header" data-position="fixed">
+                <!-- По клику откроет страницу options -->
                 <a href="#options" data-icon="gear">Options</a>
                 <h1>Dashboard</h1>
             </div>
 
             <div data-role="content">
                 <div class="ui-grid-b" id="dashboard-list">
-
+                <!-- Сюда будут отрисовываться мелкие картинки -->
                 </div>
             </div>
         </div>
 
+        <!-- Большая картинка -->
         <div data-role="page" id="dialog">
             <div data-role="header">
+                <!-- Кнопка Назад -->
                 <a data-rel="back" data-icon="back">Back</a>
                 <h1>Image</h1>
+                <!-- Ссылка на полную версию - по клику откроется в браузере -->
+                <!-- about:blank будет заменяться на соответствующую ссылку -->
                 <a href="about:blank" data-icon="search" data-theme="b" id="full-image">Full</a>
             </div>
 
             <div data-role="content">
+                <!-- about:blank будет заменяться на путь к большой картинке -->
                 <p><img src="about:blank" /></p>
             </div>
 	    </div>
 
+        <!-- Настройки -->
         <div data-role="page" id="options">
             <div data-role="header">
                 <h1>Options</h1>
@@ -44,8 +59,10 @@
             <div data-role="content">
                 <div data-role="fieldcontain">
                     <label for="name">Tumblr user:</label>
+                    <!-- Имя Tumblr пользователя -->
                     <input type="text" name="name" id="options-name" value="" />
                 </div>
+                <!-- По клику сохранится имя и откроется "Список мелких картинок" -->
                 <a data-role="button">Ok</a>
             </div>
 	    </div>
